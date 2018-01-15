@@ -1,0 +1,6 @@
+framework module Pods_jog__v0_4 {
+  umbrella header "Pods-jog!_v0.4-umbrella.h"
+
+  export *
+  module * { export * }
+}

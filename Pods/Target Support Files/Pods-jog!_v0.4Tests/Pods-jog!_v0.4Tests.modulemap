@@ -1,0 +1,6 @@
+framework module Pods_jog__v0_4Tests {
+  umbrella header "Pods-jog!_v0.4Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

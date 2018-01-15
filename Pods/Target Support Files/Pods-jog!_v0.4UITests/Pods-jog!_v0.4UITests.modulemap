@@ -1,0 +1,6 @@
+framework module Pods_jog__v0_4UITests {
+  umbrella header "Pods-jog!_v0.4UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
