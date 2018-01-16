@@ -1,21 +1,23 @@
 //
-//  ProfileViewController.swift
+//  SettingsViewController.swift
 //  jog!_v0.4
 //
-//  Created by emma kupec on 1/11/18.
+//  Created by emma kupec on 1/16/18.
 //  Copyright © 2018 Emma Kupec. All rights reserved.
 //
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class SettingsViewController: UIViewController {
 
-    @IBAction func settingsGestureAction(_ sender: Any) {
+    
+    @IBAction func cancelSettingsAction(_ sender: Any) {
         
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "sbSettings")
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "sbPageViewController")
         self.present(vc!, animated: true, completion: nil)
-        
     }
+    
     
     
     

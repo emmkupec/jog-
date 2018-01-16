@@ -108,10 +108,19 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="x1q-ul-ZuT"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Sv2-oQ-f8h" appends="YES" id="dEp-kd-H2N"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iFo-xN-7NK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Sv2-oQ-f8h">
+                    <connections>
+                        <action selector="settingsGestureAction:" destination="aGX-Tp-jJM" id="kL8-7b-Tnl"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2093.5999999999999" y="-2230.434782608696"/>
         </scene>
@@ -359,8 +368,41 @@
             </objects>
             <point key="canvasLocation" x="949.60000000000002" y="-1385.7571214392804"/>
         </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="aHh-er-wCg">
+            <objects>
+                <viewController storyboardIdentifier="sbSettings" id="nA4-1H-w9t" customClass="SettingsViewController" customModule="jog__v0_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kJj-H5-0gs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSY-WU-MsO">
+                                <rect key="frame" x="148" y="240" width="62" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfI-4B-nLr">
+                                <rect key="frame" x="147" y="64" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelSettingsAction:" destination="nA4-1H-w9t" eventType="touchUpInside" id="eBD-Tt-GoD"/>
+                                    <segue destination="Zdk-Xf-alF" kind="show" id="ieG-fJ-icW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="2ov-cP-udh"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Lj-z8-Uvd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2093.5999999999999" y="-1529.6851574212894"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="TSp-rn-UVL"/>
+        <segue reference="ieG-fJ-icW"/>
     </inferredMetricsTieBreakers>
 </document>

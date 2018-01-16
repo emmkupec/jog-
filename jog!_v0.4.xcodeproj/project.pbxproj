@@ -27,6 +27,7 @@
 		DCE257522008027D00245DBC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE257512008027D00245DBC /* HomeViewController.swift */; };
 		DCE257542008028800245DBC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE257532008028800245DBC /* SearchViewController.swift */; };
 		DCE25756200802AC00245DBC /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE25755200802AC00245DBC /* PostViewController.swift */; };
+		DCE2575A200E861300245DBC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE25759200E861300245DBC /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		DCE257512008027D00245DBC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DCE257532008028800245DBC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DCE25755200802AC00245DBC /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		DCE25759200E861300245DBC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F2FDA53772621999B8FDFFA9 /* Pods_jog__v0_4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jog__v0_4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F57C07FB978DB0ADCE9D96F1 /* Pods-jog!_v0.4Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jog!_v0.4Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jog!_v0.4Tests/Pods-jog!_v0.4Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA28C89F92C12231058A457E /* Pods_jog__v0_4Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jog__v0_4Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +143,7 @@
 				1921F6471FC0B77500FE5393 /* LoginViewController.swift */,
 				1921F6491FC0C1EE00FE5393 /* PageViewController.swift */,
 				DCE2574D2008025B00245DBC /* ProfileViewController.swift */,
+				DCE25759200E861300245DBC /* SettingsViewController.swift */,
 				DCE2574F2008027300245DBC /* ChatViewController.swift */,
 				DCE257512008027D00245DBC /* HomeViewController.swift */,
 				DCE25755200802AC00245DBC /* PostViewController.swift */,
@@ -504,6 +507,7 @@
 				1921F64C1FC0C2F800FE5393 /* AccountSetupViewController.swift in Sources */,
 				1921F6181FC0B04600FE5393 /* AppDelegate.swift in Sources */,
 				DCE25756200802AC00245DBC /* PostViewController.swift in Sources */,
+				DCE2575A200E861300245DBC /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
