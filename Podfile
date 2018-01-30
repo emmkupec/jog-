@@ -8,6 +8,7 @@ target 'jog!_v0.4' do
   # Pods for jog!_v0.4
 pod 'Firebase/Core'
 pod 'FirebaseAuth'
+pod 'Firebase/Database'
   target 'jog!_v0.4Tests' do
     inherit! :search_paths
     # Pods for testing

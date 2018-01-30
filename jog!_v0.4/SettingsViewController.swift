@@ -18,6 +18,12 @@ class SettingsViewController: UIViewController {
         self.present(vc!, animated: true, completion: nil)
     }
     
+  
+        
+        
+        
+    
+    
     
     
     
