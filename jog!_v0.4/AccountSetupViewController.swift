@@ -9,7 +9,10 @@
 import UIKit
 
 class AccountSetupViewController: UIViewController {
-
+ 
+    
+    
+    
     //username selction
     @IBOutlet weak var signUpUsername: UITextField!
     //first name collection
@@ -19,13 +22,30 @@ class AccountSetupViewController: UIViewController {
     //finish setting up account action
     @IBAction func finishAccountAction(_ sender: Any) {
         performSegue(withIdentifier: "finishSegue", sender: self)
-    }
+      
+        if (signUpUsername.text) == nil  {
+            print("No Username")
+        } else {
+            var username = signUpUsername.text
+            print(username as Any)
+        }
+        if (firstNameCollection.text == nil) || (lastNameCollection.text == nil) {
+        print("No name(s)")
     
+    
+        } else {
+           var fullName = (firstNameCollection.text, lastNameCollection.text)
+            print(fullName as Any)
+        }
+    }
+   
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+
+        
         // Do any additional setup after loading the view.
     }
 
@@ -33,7 +53,7 @@ class AccountSetupViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+   
 
 
 }

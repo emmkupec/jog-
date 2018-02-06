@@ -20,7 +20,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     lazy var orderedViewControllers: [UIViewController] = {
         return [self.newVc(viewController: "sbProfile"),
                 self.newVc(viewController: "sbChat"),
-                self.newVc(viewController: "sbHome"),
+                self.newVc(viewController: "sbHomeTableView"),
                 self.newVc(viewController: "sbSearch")]
     }()
     

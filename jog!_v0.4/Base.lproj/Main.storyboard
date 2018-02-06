@@ -148,39 +148,6 @@
             </objects>
             <point key="canvasLocation" x="2824.8000000000002" y="-2234.0329835082462"/>
         </scene>
-        <!--Home View Controller-->
-        <scene sceneID="vY3-Ja-tY8">
-            <objects>
-                <viewController storyboardIdentifier="sbHome" id="moV-41-lmQ" customClass="HomeViewController" customModule="jog__v0_4" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zaz-PN-S3z">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yoM-Gm-p5q">
-                                <rect key="frame" x="122" y="286" width="46" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <gestureRecognizers/>
-                        <viewLayoutGuide key="safeArea" id="pLV-au-dxr"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="yqb-4x-3iu" appends="YES" id="wNj-nd-jtG"/>
-                        </connections>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nuO-hK-qYJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="yqb-4x-3iu">
-                    <connections>
-                        <action selector="postGestureAction:" destination="moV-41-lmQ" id="QsG-0p-fSB"/>
-                    </connections>
-                </pongPressGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="3548" y="-2238.530734632684"/>
-        </scene>
         <!--Post View Controller-->
         <scene sceneID="iMj-08-Vpp">
             <objects>
@@ -253,6 +220,39 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="4239" y="-2234"/>
+        </scene>
+        <!--Home Table View Controller-->
+        <scene sceneID="d5a-gV-tsZ">
+            <objects>
+                <tableViewController storyboardIdentifier="sbHomeTableView" id="aiv-Rd-j8z" customClass="HomeTableViewController" customModule="jog__v0_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bf6-r2-9IS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="XqQ-nz-xef">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XqQ-nz-xef" id="e4Y-kb-hsC">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="aiv-Rd-j8z" id="AhT-BS-EM8"/>
+                            <outlet property="delegate" destination="aiv-Rd-j8z" id="uQg-DU-6od"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UbB-64-7yL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="8MP-xR-zJ4">
+                    <connections>
+                        <action selector="postGestureAction:" destination="aiv-Rd-j8z" id="1Hk-jQ-O6N"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3518" y="-2234"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="5Eq-gY-EbB">
@@ -414,6 +414,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ieG-fJ-icW"/>
+        <segue reference="cWC-fa-2ge"/>
     </inferredMetricsTieBreakers>
 </document>
