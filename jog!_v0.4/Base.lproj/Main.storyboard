@@ -139,15 +139,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9EV-CQ-zRk">
-                                <rect key="frame" x="188" y="382" width="49" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="to post"/>
-                                <connections>
-                                    <action selector="toPost:" destination="qdl-uh-lJV" eventType="touchUpInside" id="4Hk-K9-qyk"/>
-                                    <segue destination="YmZ-da-mBk" kind="show" identifier="toPost" id="raF-ac-Gng"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="TDc-M0-AnL"/>
@@ -439,6 +430,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cWC-fa-2ge"/>
+        <segue reference="TSp-rn-UVL"/>
     </inferredMetricsTieBreakers>
 </document>

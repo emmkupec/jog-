@@ -13,9 +13,7 @@ import FirebaseDatabase
 class ChatViewController: UIViewController {
     
    
-    @IBAction func toPost(_ sender: Any) {
-        performSegue(withIdentifier: "toPost", sender: self)
-    }
+  
     
 
     
