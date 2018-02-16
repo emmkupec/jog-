@@ -7,12 +7,43 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseDatabase
+
+
+var ref = DatabaseReference!.self
 
 class PostViewController: UIViewController {
+ 
     
     @IBAction func cancelPostAction(_ sender: Any) {
         performSegue(withIdentifier: "cancelPostSegue", sender: self)
     }
+    
+    
+    @IBOutlet weak var textField: UITextField!
+    
+    @IBOutlet weak var label: UILabel!
+    
+    var ref: DatabaseReference?
+    var databaseHandle:DatabaseHandle?
+    
+    
+    
+    @IBAction func postAction(_ sender: Any) {
+        ref = Database.database().reference()
+        
+        ref?.child("list").childByAutoId().setValue(textField.text) //text field put into database text
+        
+        ref?.child("list").observe(.childAdded, with: { (snapshot) in
+            let post = snapshot.value as? String
+            self.label.text = post
+            
+            
+        })
+        
+    }
+    
     
     
     

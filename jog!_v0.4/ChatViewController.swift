@@ -12,30 +12,12 @@ import FirebaseDatabase
 
 class ChatViewController: UIViewController {
     
-    var ref: DatabaseReference?
-    var databaseHandle:DatabaseHandle?
-    
-    
-    
-    @IBOutlet weak var textField: UITextField!
-    
-    @IBOutlet weak var label: UILabel!
-    
-    
-    
-    @IBAction func postAction(_ sender: Any) {
-        ref = Database.database().reference()
-        
-        ref?.child("list").childByAutoId().setValue(textField.text) //text field put into database text
-        
-       ref?.child("list").observe(.childAdded, with: { (snapshot) in
-            let post = snapshot.value as? String
-                self.label.text = post
-
-        
-     })
-        
+   
+    @IBAction func toPost(_ sender: Any) {
+        performSegue(withIdentifier: "toPost", sender: self)
     }
+    
+
     
    
     override func viewDidLoad() {
