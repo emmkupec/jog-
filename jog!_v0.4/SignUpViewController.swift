@@ -30,38 +30,35 @@ class SignUpViewController: UIViewController {
             alertController.addAction(defaultAction)
             
             present(alertController, animated: true, completion: nil)
-            
+            if signUpPasswordCollection.text != signUpPasswordConfirm.text {
+                let alertController = UIAlertController(title: "Error", message: "Your password does not match.", preferredStyle: .alert)
+                
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(defaultAction)
+                
+                
+                
+            } else {
+                Auth.auth().createUser(withEmail: signUpEmailCollection.text!, password: signUpPasswordCollection.text!) { (user, error) in }
+                
+                print("Welcome to the Team!")
+                
+                //performSegue(withIdentifier: "signUpSegue", sender: self)
+                
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "sbSetup")
+                self.present(vc!, animated: true, completion: nil)
+            }
             
                 }
-        else {
-                    Auth.auth().createUser(withEmail: signUpEmailCollection.text!, password: signUpPasswordCollection.text!) { (user, error) in }
-                    
-                    print("Welcome to the Team!")
-            
-            //performSegue(withIdentifier: "signUpSegue", sender: self)
-                    
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "sbSetup")
-                    self.present(vc!, animated: true, completion: nil)
-                
-    }
+        
     }
     
-        
-        
-        
-        
     
     //login if already a member
     @IBAction func toLoginAction(_ sender: Any) {
         performSegue(withIdentifier: "toLoginSegue", sender: self)
         
     }
-    
-    
-    
-    
-    
-    
     
     
     

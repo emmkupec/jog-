@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
+
+
 
 class HomeTableViewController: UITableViewController {
+    
+    var ref = DatabaseReference!.self
 
-        
-   
     
     @IBAction func postGestureAction(_ sender: Any) {
         
@@ -22,6 +26,7 @@ class HomeTableViewController: UITableViewController {
          
          present(alertController, animated: true, completion: nil)
         */
+        
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "sbPost")
         self.present(vc!, animated: true, completion: nil)
