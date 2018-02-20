@@ -8,7 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
-import FirebaseDatabase
+
 
 
 var ref = DatabaseReference!.self

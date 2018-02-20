@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class AccountSetupViewController: UIViewController {
  
+    var ref: DatabaseReference!
     
+    let actual_email:String = email
     
     
     //username selction
@@ -20,34 +23,38 @@ class AccountSetupViewController: UIViewController {
     //last name collection
     @IBOutlet weak var lastNameCollection: UITextField!
     //finish setting up account action
-    @IBAction func finishAccountAction(_ sender: Any) {
-        performSegue(withIdentifier: "finishSegue", sender: self)
-      
-        if (signUpUsername.text) == nil  {
-            print("No Username")
-        } else {
-            var username = signUpUsername.text
-            print(username as Any)
-        }
-        if (firstNameCollection.text == nil) || (lastNameCollection.text == nil) {
-        print("No name(s)")
-    
-    
-        } else {
-           var fullName = (firstNameCollection.text, lastNameCollection.text)
-            print(fullName as Any)
-        }
-    }
-   
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        print (actual_email + " second")
+        ref = Database.database().reference()
         
         // Do any additional setup after loading the view.
     }
+    @IBAction func finishAccountAction(_ sender: Any) {
+        //performSegue(withIdentifier: "finishSegue", sender: self)
+        if signUpUsername.text != nil{
+             var actual_email = email.replacingOccurrences(of: ".", with: "")
+            ref?.child("Users").child(actual_email).childByAutoId().setValue(signUpUsername.text) //remove the email
+            
+
+        }
+        else {
+            //show error dialog
+            
+        }
+        if (firstNameCollection.text == nil) && (lastNameCollection.text == nil) {
+       //error dialog
+         
+         
+         } else {
+           /* ref?.child("Troll").child("Users").child(signUpUsername.text!).child("First Name").setValue(firstNameCollection.text)
+            ref?.child("Troll").child("Users").child(signUpUsername.text!).child("Last Name").setValue(lastNameCollection.text)*/
+         }
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
-
+var email:String = "" //global var so I can make child nodes under it
 class LoginViewController: UIViewController {
     
     // login email
@@ -43,13 +43,14 @@ class LoginViewController: UIViewController {
             
             
         } else  {
-            
+            email = loginEmail.text!
+            print (email)
             Auth.auth().signIn(withEmail: loginEmail.text!, password: loginPassword.text!) { (user, error) in
             }
             
             print("Welcome Back!")
             
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "sbPageViewController")
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "sbSetup")
             self.present(vc!, animated: true, completion: nil)
             
             

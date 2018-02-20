@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import FirebaseDatabase
+
+
+var ref2 = DatabaseReference!.self
 
 class ProfileViewController: UIViewController {
 
@@ -16,13 +20,13 @@ class ProfileViewController: UIViewController {
         self.present(vc!, animated: true, completion: nil)
         
     }
-    
+    @IBOutlet weak var usernameLabel: UILabel!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+   
         // Do any additional setup after loading the view.
     }
 

@@ -21,6 +21,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         return [self.newVc(viewController: "sbProfile"),
                 self.newVc(viewController: "sbChat"),
                 self.newVc(viewController: "sbHome"),
+                self.newVc(viewController: "sbPost"),
                 self.newVc(viewController: "sbSearch")]
     }()
     
