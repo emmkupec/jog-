@@ -50,8 +50,8 @@ class AccountSetupViewController: UIViewController {
          
          
          } else {
-           /* ref?.child("Troll").child("Users").child(signUpUsername.text!).child("First Name").setValue(firstNameCollection.text)
-            ref?.child("Troll").child("Users").child(signUpUsername.text!).child("Last Name").setValue(lastNameCollection.text)*/
+           ref?.child("Users").child(actual_email).child(signUpUsername.text!).child("First Name").setValue(firstNameCollection.text)
+            ref?.child("Users").child(actual_email).child(signUpUsername.text!).child("Last Name").setValue(lastNameCollection.text)
          }
     }
     
